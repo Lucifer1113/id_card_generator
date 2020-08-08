@@ -114,7 +114,7 @@ class App extends Component {
       <div className="df">
         {this.state.themeColor.map(theme=>(<div className="box m-2 circle" style={{backgroundColor: theme}} onClick={()=>this.handleThemeClick(theme)}></div>))}
       </div>
-    
+    <h1>Manish</h1>
         <button className="btn" onClick={this.handleRandomClick}>Random</button>
       
       </div>

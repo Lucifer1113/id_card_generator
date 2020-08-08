@@ -93,7 +93,6 @@ class App extends Component {
     return (
       <div className="App">
         <h1>ID CARD GENERATOR</h1>
-        <h2>chaurasiya</h2>
 
         <Card 
         ref={this.myInput}
@@ -109,14 +108,14 @@ class App extends Component {
         image={image}
         idCardNumber={idCardNumber}
         showInputNationality = {showInputNationality}
-        onClick={(type)=>this.handleClick(type)} 
-        onChange={(e)=>this.handleChange(e)}
+        showInputTag={(type)=>this.handleClick(type)} 
+        changedInputValue={(e)=>this.handleChange(e)}
         onKeyChange={(e)=>this.handleKeyChange(e)}
       />
       <div className="df">
         {this.state.themeColor.map(theme=>(<div className="box m-2 circle" style={{backgroundColor: theme}} onClick={()=>this.handleThemeClick(theme)}></div>))}
       </div>
-    <h1>Manish</h1>
+    
         <button className="btn" onClick={this.handleRandomClick}>Random</button>
       
       </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import "./card.css";
 const Card = (props) => {
 
-    const {name, dob, phone, email, image, nationality, showInputName, showInputDob, showInputPhone, showInputEmail, showInputNationality, onClick, onChange, onKeyChange, idCardNumber } = props;
+    const {name, dob, phone, email, image, nationality, showInputName, showInputDob, showInputPhone, showInputEmail, showInputNationality, showInputTag, changedInputValue, onKeyChange, idCardNumber } = props;
     
     return (  
         <div className="id-card" >
@@ -12,25 +12,25 @@ const Card = (props) => {
             <div className="card-body">
                 <div className="card-body-left">
                     <div className="card-body-left-info">
-                        <div className="card-info-field" onClick={()=>onClick('name')}>
+                        <div className="card-info-field" onClick={()=>showInputTag('name')}>
                             <span className="tb">Name</span>
-                            {!showInputName ? <span>{name}</span> : <input type="text" name="name" onKeyPress={(e)=>onKeyChange(e)} onChange={(e)=>onChange(e)}/>}
+                            {!showInputName ? <span>{name}</span> : <input type="text" name="name" onKeyPress={(e)=>onKeyChange(e)} onChange={(e)=>changedInputValue(e)}/>}
                         </div>
-                        <div className="card-info-field" onClick={()=>onClick('dob')}>
+                        <div className="card-info-field" onClick={()=>showInputTag('dob')}>
                             <span className="tb">DOB</span>
-                            {!showInputDob ? <span>{dob}</span> : <input type="text" name="dob" onKeyPress={(e)=>onKeyChange(e)} onChange={(e)=>onChange(e)}/>}
+                            {!showInputDob ? <span>{dob}</span> : <input type="text" name="dob" onKeyPress={(e)=>onKeyChange(e)} onChange={(e)=>changedInputValue(e)}/>}
                         </div>
-                        <div className="card-info-field" onClick={()=>onClick('phone')}>
+                        <div className="card-info-field" onClick={()=>showInputTag('phone')}>
                             <span className="tb">Phone</span>
-                            {!showInputPhone ? <span>{phone}</span> : <input type="number" name="phone" onKeyPress={(e)=>onKeyChange(e)} onChange={(e)=>onChange(e)}/>}
+                            {!showInputPhone ? <span>{phone}</span> : <input type="number" name="phone" onKeyPress={(e)=>onKeyChange(e)} onChange={(e)=>changedInputValue(e)}/>}
                         </div>
-                        <div className="card-info-field" onClick={()=>onClick('email')}>
+                        <div className="card-info-field" onClick={()=>showInputTag('email')}>
                             <span className="tb">Email</span>
-                            {!showInputEmail ? <span>{email}</span> : <input type="email" name="email" onKeyPress={(e)=>onKeyChange(e)} onChange={(e)=>onChange(e)}/>}
+                            {!showInputEmail ? <span>{email}</span> : <input type="email" name="email" onKeyPress={(e)=>onKeyChange(e)} onChange={(e)=>changedInputValue(e)}/>}
                         </div>                  
-                        <div className="card-info-field" onClick={()=>onClick('nationality')}>
+                        <div className="card-info-field" onClick={()=>showInputTag('nationality')}>
                             <span className="tb">Nationality</span>
-                            {!showInputNationality ? <span>{nationality}</span> : <input type="text" name="nationality" onKeyPress={(e)=>onKeyChange(e)} onChange={(e)=>onChange(e)}/>}
+                            {!showInputNationality ? <span>{nationality}</span> : <input type="text" name="nationality" onKeyPress={(e)=>onKeyChange(e)} onChange={(e)=>changedInputValue(e)}/>}
                         </div>                  
                     </div>
                 </div>

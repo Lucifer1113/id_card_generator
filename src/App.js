@@ -1,8 +1,8 @@
-import React, {createRef} from 'react';   // need to discuss
+import React, {createRef,Component} from 'react';   // need to discuss
 import Card from "./components/id-card/card";
 import './App.css';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -20,7 +20,7 @@ class App extends React.Component {
       showInputNationality: false,
       themeColor: ['#14213d', '#3c2c3e', '#004D40', "#3E2723", "#212121", "#263238"]
     }
-    this.myInput = React.createRef();      
+    this.myInput = createRef();      
   }
   componentDidMount() {
     const node = this.myInput.current;  // need to discuss
@@ -35,7 +35,7 @@ class App extends React.Component {
       name = name['first'] + " " + name['last'];
       dob = (new Date(dob['date'])).toLocaleDateString(); // need to discuss......
       image = image['large'];
-      this.setState({ email, dob, image, nationality, phone})
+      this.setState({ name, email, dob, image, nationality, phone})
     })
   }
   
@@ -73,7 +73,7 @@ class App extends React.Component {
     }
   }
   handleKeyChange = e =>{
-    if(e.key == "Enter"){
+    if(e.key === "Enter"){
       switch(e.currentTarget.name){
         case 'name': this.setState({showInputName: false});
         break;
@@ -114,9 +114,9 @@ class App extends React.Component {
       <div className="df">
         {this.state.themeColor.map(theme=>(<div className="box m-2 circle" style={{backgroundColor: theme}} onClick={()=>this.handleThemeClick(theme)}></div>))}
       </div>
-      <div>
+    
         <button className="btn" onClick={this.handleRandomClick}>Random</button>
-      </div>
+      
       </div>
     );
   }

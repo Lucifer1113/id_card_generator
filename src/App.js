@@ -93,6 +93,8 @@ class App extends Component {
     return (
       <div className="App">
         <h1>ID CARD GENERATOR</h1>
+        <h2>chaurasiya</h2>
+
         <Card 
         ref={this.myInput}
         name={name} 

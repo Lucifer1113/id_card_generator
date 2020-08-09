@@ -20,13 +20,16 @@ You will also see any lint errors in the console.
 
 ## Snapshots
 
-<img src="https://ibb.co/vDKg0Td" alt="Snapshot-1"/>
-<img src="https://ibb.co/hMmq2cd" alt="Snapshot-2"/>
-<img src="https://ibb.co/PQC3Y7B" alt="Snapshot-3"/>
-<img src="https://ibb.co/1rHrtpB" alt="Snapshot-4"/>
+[![ss1](https://ibb.co/vDKg0Td)](https://ibb.co/vDKg0Td)
+[![ss2](https://ibb.co/hMmq2cd)](https://ibb.co/hMmq2cd)
+[![ss3](https://ibb.co/PQC3Y7B)](https://ibb.co/PQC3Y7B)
+[![ss4](https://ibb.co/1rHrtpB)](https://ibb.co/1rHrtpB)
+
 
 
 ## Preview
 
-<img src="https://ibb.co/PCSXWZw" alt="id-preview-gif"/>
+[![ss1](https://ibb.co/PCSXWZw)](https://ibb.co/PCSXWZw)
+
+
 
